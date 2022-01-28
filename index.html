@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STOPWATCH</title>
+    <link rel="stylesheet" href="./css-dist/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <div class="stopwatch">
+      <h1 class="counters">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span
+          id="seconds"
+          >00</span
+        >
+      </h1>
+      <p class="text"><span>hr</span><span>min</span><span>sec</span></p>
+
+      <div class="buttons">
+        <button id="startButton" onclick="startTime()">
+          <span class="material-icons-outlined md-50">play_arrow</span>
+        </button>
+        <button id="stopButton" disabled>
+          <span class="material-icons-outlined md-50"> stop </span>
+        </button>
+        <button id="resetButton" disabled>
+          <span class="material-icons-outlined md-50"> replay </span>
+        </button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
