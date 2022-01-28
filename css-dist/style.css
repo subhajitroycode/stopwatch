@@ -263,13 +263,13 @@
     margin-top: -10px;
   }
   .stopwatch .text span:first-child {
-    left: 12px;
+    left: 0px;
   }
   .stopwatch .text span:nth-child(2) {
     left: 0px;
   }
   .stopwatch .text span:last-child {
-    right: 8px;
+    right: 0px;
   }
   .stopwatch .buttons button {
     width: 80px;
