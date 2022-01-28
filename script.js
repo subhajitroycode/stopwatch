@@ -2,6 +2,7 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 let intervalID = 0;
+
 const secTime = document.getElementById("seconds");
 const minTime = document.getElementById("minutes");
 const hourTime = document.getElementById("hours");
@@ -10,13 +11,17 @@ const cursor = (id, value) => {
     id.style.cursor = value;
 }
 
+const disableButton = (id, value) => {
+    id.disabled = value;
+}
+
 const startTime = document.getElementById('startButton');
 startTime.onclick = () => {
     intervalID = window.setInterval(stopwatch, 1000);
     
-    startTime.disabled = true;
-    stopTime.disabled = false;
-    resetTime.disabled = false;
+    disableButton(startTime, true);
+    disableButton(stopTime, false);
+    disableButton(resetTime, false);
 
     cursor(stopTime, "pointer");
     cursor(resetTime, "pointer");
@@ -61,13 +66,13 @@ const stopwatch = () => {
 const stopTime = document.getElementById('stopButton');
 stopTime.onclick = () => {
     window.clearInterval(intervalID);
-    startTime.disabled = false;
+    disableButton(startTime, false);
 }
 
 const resetTime = document.getElementById('resetButton');
 resetTime.onclick = () => {
-    clearInterval(intervalID);
-    startTime.disabled = false;
+    stopTime.onclick();
+    
     seconds = 0;
     hourTime.innerText = '00';
     minTime.innerText = '00';
