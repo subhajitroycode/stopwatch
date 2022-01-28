@@ -1,0 +1,25 @@
+@media (max-width: 700px) {
+  .stopwatch {
+    width: 100%;
+
+    .counters {
+      font-size: 5.6rem;
+    }
+
+    .text {
+      margin-top: -10px;
+
+      span:first-child {
+        left: 0px;
+      }
+
+      span:nth-child(2) {
+        left: 0px;
+      }
+
+      span:last-child {
+        right: 0px;
+      }
+    }
+  }
+}

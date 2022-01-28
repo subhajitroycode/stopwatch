@@ -251,4 +251,25 @@
 .stopwatch .buttons #resetButton {
   cursor: not-allowed;
 }
+
+@media (max-width: 700px) {
+  .stopwatch {
+    width: 100%;
+  }
+  .stopwatch .counters {
+    font-size: 5.6rem;
+  }
+  .stopwatch .text {
+    margin-top: -10px;
+  }
+  .stopwatch .text span:first-child {
+    left: 0px;
+  }
+  .stopwatch .text span:nth-child(2) {
+    left: 0px;
+  }
+  .stopwatch .text span:last-child {
+    right: 0px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
